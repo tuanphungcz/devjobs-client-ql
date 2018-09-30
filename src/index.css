@@ -1,0 +1,108 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background:#fafafa;
+  font-size: 16px;
+  color: black;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.Select--multi {
+  min-width: 300px;
+  z-index: 1;
+}
+
+.DraftEditor-root {
+  font-family: 'Nunito', sans-serif;
+  background: #fbfbfb;
+}
+
+.public-DraftEditor-content {
+  min-height: 150px;
+}
+
+.is-open {
+  z-index: 100 !important;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 100;
+}
+
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  overflow: hidden;
+}
+
+
+
+.loader {
+  padding: 5% 0;
+}
+.loading-spinner {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5% 0;
+  width: 44px;
+  height: 44px;
+}
+.loading-spinner:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+.circle-svg {
+  animation: loading-spinner-rotate 1s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.circle-stroke {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: loading-spinner-dash 1.5s ease-in-out infinite, loading-spinner-color 6s ease-in-out infinite;
+  stroke-linecap: square;
+  stroke-width: 4px;
+}
+@keyframes loading-spinner-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading-spinner-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes loading-spinner-color {
+  100%,
+  0% {
+    stroke: #01ADAB;
+  }
+  33% {
+    stroke: #7F5EBA;
+  }
+  66% {
+    stroke: #FF3333;
+  }
+}

@@ -1,0 +1,1 @@
+export const goToLocation = location => (window.location.href = '/dashboard');

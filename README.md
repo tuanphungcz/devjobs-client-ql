@@ -1,1 +1,1 @@
-# DEVJOBS - Razzle x Apollo x Redux Example
+# DEVJOBS - Razzle x Apollo x Redux
